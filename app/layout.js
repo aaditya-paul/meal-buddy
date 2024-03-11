@@ -9,6 +9,7 @@ const epilogue = Epilogue({
   subsets: ["latin"],
   variable: "--font-epilogue",
 });
+// * meta data
 export const metadata = {
   title: "Meal Buddy",
   description: "Create custom personalised meals that suits your lifestyle.",
