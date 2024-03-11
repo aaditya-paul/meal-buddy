@@ -12,6 +12,7 @@ function Banner() {
             alt="bannerImage"
             fill
             className=" md:rounded-xl object-cover"
+            placeholder="blur"
           />
         </div>
       </div>

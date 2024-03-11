@@ -4,6 +4,7 @@ import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
 import {client} from "./groq";
 import defaultImage from "../../../public/assets/how2.jpg";
+import LoadingItems from "../loadingItems";
 const maxCharLength = 90;
 
 class ListRenderer extends Component {
@@ -15,7 +16,7 @@ class ListRenderer extends Component {
   }
 
   render() {
-    const {element, noImage} = this.props;
+    const {element} = this.props;
     const builder = imageUrlBuilder(client);
     if (element.length !== 0) {
       return element.map((e, i) => {
@@ -29,11 +30,7 @@ class ListRenderer extends Component {
               <div className="relative w-full h-64 mb-4 md:group-hover:scale-90 transition-transform ease-in-out">
                 <Image
                   fill
-                  src={
-                    noImage
-                      ? defaultImage
-                      : builder.image(e.mainImage.asset).url()
-                  }
+                  src={builder.image(e.mainImage.asset).url()}
                   alt={e.title}
                   className="object-cover rounded-lg"
                 />
@@ -56,7 +53,11 @@ class ListRenderer extends Component {
         );
       });
     } else {
-      return null;
+      return (
+        <div className="md:block flex justify-center w-[full] self-center items-center md:m-0 md:my-10 m-24 ">
+          <LoadingItems />
+        </div>
+      );
     }
   }
 }

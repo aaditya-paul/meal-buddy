@@ -66,8 +66,6 @@ export class Featured extends Component {
   }
 
   render() {
-    // console.log(this.state.food.length);
-
     return (
       <div className="md:mt-10 font-epilogue p-4 md:p-0">
         <div className="font-bold text-2xl mt-5 md:mt-0 mb-3 md:mb-5 ">
@@ -76,7 +74,6 @@ export class Featured extends Component {
         <div className="">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
             <ListRenderer element={this.state.food} />
-            {/* <ListRenderer element={featuredMeals} /> */}
           </div>
         </div>
       </div>
