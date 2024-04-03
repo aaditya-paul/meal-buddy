@@ -29,11 +29,11 @@ function NavBar(props) {
   return (
     <div className={`mb-[${props.mb}px] `}>
       {/* desktop tab */}
-      <div className="p-8  w-full px-16 hidden md:flex justify-between border-2 border-b-slate-300">
+      <div className="p-8 w-full px-16 hidden md:flex justify-between border-2 border-b-slate-300">
         <div>
           <Link
             href={"/"}
-            className="items-center font-expletus font-bold text-2xl"
+            className="items-center font-expletus font-bold sm:text-2xl md:text-lg lg:text-2xl"
           >
             Meal Buddy
           </Link>
@@ -43,16 +43,16 @@ function NavBar(props) {
             return (
               <div
                 key={e.path}
-                className="  transition-transform ease-linear delay-15 hover:scale-110 ml-[44px] hover:underline underline-offset-4 font-epilogue"
+                className="  transition-transform ease-linear delay-15 hover:scale-110 lg:ml-[44px] ml-[24px] hover:underline underline-offset-4 font-epilogue"
               >
                 <Link href={e.path}>{e.name}</Link>
               </div>
             );
           })}
-          <div className="transition-transform ease-linear delay-15 hover:scale-110 ml-[44px] hover:underline underline-offset-4 font-epilogue  font-bold">
+          <div className="transition-transform ease-linear delay-15 hover:scale-110 lg:ml-[44px] ml-[24px] font-epilogue  font-bold">
             <Link href={"/"}>Login</Link>
           </div>
-          <div className="transition-transform ease-linear delay-15 hover:scale-110 ml-[44px] hover:underline underline-offset-4 font-epilogue  font-bold bg-[#F2330D] px-5 py-2 rounded-xl text-white">
+          <div className="transition-transform ease-linear delay-15 hover:scale-110 lg:ml-[44px] ml-[24px] font-epilogue  font-bold bg-[#F2330D] px-5 py-2 rounded-xl text-white">
             <Link href={"/"}>Sign Up</Link>
           </div>
         </div>

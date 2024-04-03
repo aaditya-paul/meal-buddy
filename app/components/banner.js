@@ -28,11 +28,11 @@ function Banner() {
         <div className=" flex flex-row rounded-md w-[90%] md:w-[50%] mt-3 md:mt-5 bg-[#FCFAF7] p-1 md:p-2">
           <input
             type="text"
-            className=" text-sm md:text-lg border-none outline-none text-[#9C574A] placeholder:text-[#9C574A] p-2 md:py-2 md:px-5 w-2/3 rounded-md "
+            className=" text-sm lg:text-lg border-none outline-none text-[#9C574A] placeholder:text-[#9C574A] p-2 md:py-2 md:px-5 w-2/3 rounded-md "
             placeholder="Enter your email"
           />
           <div className=" cursor-pointer hover:scale-105 transition-transform ease-linear flex bg-[#F2330D] justify-center items-center w-1/3 rounded-md">
-            <p className=" font-epilogue font-medium text-sm md:text-lg">
+            <p className=" font-epilogue font-medium text-sm lg:text-lg">
               Get Started
             </p>
           </div>

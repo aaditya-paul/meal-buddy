@@ -3,7 +3,7 @@ import Image from "next/image";
 import How1 from "../../public/assets/how1.jpg";
 import How2 from "../../public/assets/how2.jpg";
 import How3 from "../../public/assets/how3.jpg";
-import ListRenderer from "./utils/listRenderer";
+import ListRenderer, {ListRendererContainer} from "./utils/listRenderer";
 import {GetFood} from "./utils/groq";
 
 const featuredMeals = [
@@ -72,9 +72,9 @@ export class Featured extends Component {
           Featured Meals{" "}
         </div>
         <div className="">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+          <ListRendererContainer>
             <ListRenderer element={this.state.food} />
-          </div>
+          </ListRendererContainer>
         </div>
       </div>
     );
